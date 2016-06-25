@@ -1,0 +1,62 @@
+.addFilePanel {
+	position: absolute;
+	left: 0;
+	width: 30vw;
+	padding: 2vmin 5vmin 5vmin 3vmin;
+	height: 100%;
+	box-shadow: inset 0 0 2vmin rgba(0, 0, 0, 0.3);
+	.addFileButton{
+		position:absolute;
+		top:70vmin;
+	}
+	.fileInfoContainer {
+		position: absolute;
+		top: 20vmin;
+	}
+	.fileDescriptionContainer {
+		position: absolute;
+		top: 40vmin;
+		textarea{
+			width: 30vmin;
+			height:10vmin;
+		}
+	}
+	.uploadFileButton {
+		margin:2vmin;
+		box-shadow: 0 0 1vmin rgba(0, 0, 0, .3);
+		text-align: left;
+		border: .3vmin dashed rgba(150, 150, 150, 0.3);
+		cursor: pointer;
+		transition: all .3s ease 0s;
+		position: absolute;
+		left: .7vmin;
+		width: 40vmin;
+		top: .5vmin;
+		height: 5vmin;
+		line-height: 4.5vmin;
+		padding: 0 2vmin;
+
+		&:before {
+			content: "+";
+			font-weight: bold;
+			font-size: 200%;
+			float: left;
+			margin: 0 .6vmin 0 0;
+		}
+
+		&:hover,
+		&.active {
+			box-shadow: 0 0 1vmin rgba(0, 0, 0, .3) inset;
+
+		}
+		input {
+			top: 0;
+			opacity: 0;
+		}
+		label {
+			position: absolute;
+			right: 0;
+			left: 5vmin;
+		}
+	}
+}

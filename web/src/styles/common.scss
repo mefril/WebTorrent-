@@ -87,3 +87,31 @@
 
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.button{
+	box-shadow: 0 0 1vmin rgba(0, 0, 0, .3);
+	cursor: pointer;
+	width: 40vmin;
+	height: 5vmin;
+	line-height: 4.5vmin;
+	padding: 0 2vmin;
+	font-weight: bold;
+	text-align: center;
+	-webkit-border-radius:1vmin;
+	-moz-border-radius:1vmin;
+	border-radius:1vmin;
+	&:hover{
+		box-shadow: 0 0 1vmin rgba(0, 0, 0, .3) inset;
+	}
+}
+input[type="text"] {
+	width: 0;
+	float: left;
+	margin-right: 1vmin;
+	background-color: transparent;
+	padding: 0 2.1vmin;
+	position: relative;
+	transition: background-color 0.2s ease 0s, width 0.5s ease 0s, padding 0.5s ease 0s;
+	user-select: text;
+	-moz-user-select: text;
+	-webkit-user-select: text;
+}

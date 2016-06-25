@@ -1,19 +1,19 @@
 import React, {Component} from 'react'
 import WebTorrentContainer from './WebTorrentContainer'
+import Reducer from './reducers/CombinedReducer'
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
 
-require('styles/common.less');
+require('styles/common.scss');
+require('styles/addFilesPanel.scss');
 require('bootstrap-loader'); //Disable it in dev mode after first run to improve performance
 
-export default class BooksApp extends Component {
-    constructor(props){
-        super(props);
-    }
 
-    goToAllBooks=()=>{
-        browserHistory.push('/books');
-    }
-    goToAllAuthors=()=>{
-        browserHistory.push('/authors');
+const store = createStore(Reducer);
+
+export default class BooksApp extends Component {
+    constructor(props) {
+        super(props);
     }
 
     render() {
@@ -27,9 +27,10 @@ export default class BooksApp extends Component {
                             <span>orrent</span>
                         </h1>
                     </div>
-
                 </div>
-                <WebTorrentContainer/>
+                <Provider store={store}>
+                    <WebTorrentContainer/>
+                </Provider>
             </div>
         );
     }
