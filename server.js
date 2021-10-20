@@ -17,7 +17,7 @@ app.get('/bundle.js', function (req, res) {
   
     res.sendFile(path.join(__dirname, 'web/build/bundle.js'));
 });
-
+//asd
 app.listen(config.port, function(err) {
     if (err) {
         console.log(err);
